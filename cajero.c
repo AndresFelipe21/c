@@ -98,3 +98,20 @@ int validate(int account_numb_temp, int passwd_temp) //VARIABLE QUE NOMBRO Y COM
         }
     }
 }
+void balance ()
+{
+    printf("\nEnter the account number\t");
+    scanf("%d", &account_numb_temp);
+    
+    printf("\nEnter the amount to deposit\t");
+    scanf("%d", &amount_temp);
+    
+    printf("\nEnter the password\t");
+    scanf("%d", &passwd_temp);
+    
+    x=validate(account_numb_temp, passwd_temp);
+    
+    s[x].amount+=amount_temp;
+    
+    printf("\nRs:%d is successfully")
+}
