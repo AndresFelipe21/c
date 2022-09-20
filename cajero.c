@@ -73,19 +73,19 @@ void withdrawal()
     }
 }
 
-int validate(int account_numb_temp, int passwd_temp)
+int validate(int account_numb_temp, int passwd_temp) //VARIABLE QUE NOMBRO Y COMPARO EN EL CICLO FOR DE ABAJO
 
 {
-    for(i=0;i<3;i++)
+    for(i=0;i<3;i++) // MIENTRAS i SEA MENOR O IGUAL QUE TRES INCREMENTA 1
     {
-        if(s[i].account_no==account_numb_temp)
+        if(s[i].account_no==account_numb_temp) //SE EJECUTA MIENTRAS LA CONDICION DE ARRIBA SE CUMPLA- IF (CONDICION) //cOMPARACION DEL NUMERO DE CUENTA
         {
-            if(s[i].password==passwd_temp)
+            if(s[i].password==passwd_temp) //cOMPARACION DE LA CLAVE DE CUENTA
             {
-                return i;
+                return i; //retorna la posicion si esto se cumple
                 break;
             }
-            else
+            else //SI NO SE CUMPLE IMPRIME ESTO (SI LA CUENTA NO EXISTE)
             {
                 printf("\nPassword Mismatch");
                 exit(1);
