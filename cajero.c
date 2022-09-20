@@ -4,7 +4,7 @@ void deposit();
 void withdrawal();
 void balance();
 
-int validate(int account_numb_temp, int passwd_temp);
+int validate(int account_numb_temp, int passwd_temp); //VALIDA LOS PARAMETROS
 int i,x;
 int account_numb_temp;
 int amount_temp;
@@ -17,7 +17,7 @@ struct account_details
     int amount;
 };
 
-struct account_details s[3]={(12343432,1234,0), (12343432,5678,0), (89877182,1098,0)};
+struct account_details s[3]={(12343432,1234,0), (12343432,5678,0), (89877182,1098,0)}; CADA PARENTESIS ES UN CLIENTE, SU INFORMACION POR CADA UNO GUARDA TRES DATOS
 
 int main()
 {
@@ -56,7 +56,7 @@ int main()
 
 void withdrawal()
 {
-    printf("\nEnter the account number\t");
+    printf("\nEnter the account number\t"); //PRINT SIEMPREN VA CON SU SCANF EN ORDEN
     scanf("%d", &account_numb_temp);
     
     printf("\nEnter the password\t");
@@ -65,7 +65,7 @@ void withdrawal()
     printf("\nEnter the amount to withdrawal\t");
     scanf("%d", &amount_temp);
     
-    x = validate(account_numb_temp, passwd_temp);
+    x = validate(account_numb_temp, passwd_temp); // VALIDAR ES UN METODO QUE COMPARA LOS VALORES DEL USUARIO CON LO QUE HAY EN LA BASE DE DATOS SE GUARDA ADEMAS EN LA VARIABLE x QUE COMPARA LA POSICION DE CADA CLIENTE
     
     if(s[x].amount<amount_temp)
     {
